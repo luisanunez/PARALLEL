@@ -1,5 +1,3 @@
-////gcc countwords.c -o count -lpthread
-
 # include <stdio.h>
 # include <pthread.h>
 # include <stdlib.h>

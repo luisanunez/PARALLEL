@@ -1,5 +1,3 @@
-//mpicc -o ejecutable codigo.c
-//mpirun -np N ./ejecutable
 
 #include <stdio.h>
 #include <stdlib.h>
