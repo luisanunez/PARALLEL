@@ -1,0 +1,6 @@
+a [0] = 0;
+for ( i = 1; i < n ; i ++)
+a [ i ] = a [ i − 1] + i ;
+
+
+Para paralelizar seria idea crear una nueva variable para no depender de la variable a
