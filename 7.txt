@@ -1,0 +1,3 @@
+Al utilizar un solo thread nos aseguramos que no hay race condition,
+es por eso que la variable globar no sera modificada incorrectamente
+y el resultado sera el verdadero
