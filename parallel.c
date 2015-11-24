@@ -3,13 +3,15 @@
 #include <omp.h>
 
 void Trap(int n);
+void loop(int n);
+void loop2(int n);
 
 int main(int argc, char* argv[]) {
 int thread_count;
 thread_count = strtol(argv[1], NULL, 10);
 # pragma omp parallel num_threads(thread_count)
 //Trap(4);
-loop();
+loop(4);
  
  return 0;
 }
@@ -33,12 +35,32 @@ void Trap(int n) {
 } 
 
 
-void loop(){
+void loop(int n){
 	int* a;
-	int n = 4;
 	a[0]=0;
 	for(int i = 1; i<n; i++){
 		a[i]=a[i-1]+1;
 	}
-
+printf("Thread hasta  \n");
 }
+
+void loop2(int n){
+	int* a;
+	a[0]=0;
+	for(int i = 1; i<n; i++){
+		a[i]=i;
+	}
+printf("Thread hasta  \n");
+}
+
+
+/*
+
+a[1]=a[0]+1=0+1 = 1
+a[2]=a[1]+1=1+1 = 2 
+a[3]=a[2]+1=2+1 = 3 
+
+a[1] = i = 1
+a[2] = i = 2
+a[3] = i = 3
+*/
